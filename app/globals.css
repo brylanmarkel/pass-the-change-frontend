@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FBF7F2;
+  --foreground: #2E2218;
+  --color-bg: #FBF7F2;
+  --color-card: #FFF8F2;
+  --color-border: #E0D5CB;
+  --color-brown: #5C4A38;
+  --color-brown-dark: #2E2218;
+  --color-brown-darkest: #1A120C;
+  --color-muted: #9C8B7E;
+  --color-accent: #A8967F;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bg: var(--color-bg);
+  --color-card: var(--color-card);
+  --color-border: var(--color-border);
+  --color-brown: var(--color-brown);
+  --color-brown-dark: var(--color-brown-dark);
+  --color-brown-darkest: var(--color-brown-darkest);
+  --color-muted: var(--color-muted);
+  --color-accent: var(--color-accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-brown-dark);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.2s ease-out;
+}
